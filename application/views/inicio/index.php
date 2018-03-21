@@ -30,7 +30,7 @@
 							<h2 class="to-animate">Lonchería</h2>
 							<h3>Aquí se come como en casa, pero sin lavar los platos... estás siendo atendido por la familia Vega; Ordena y disfruta... ¡buen provecho!</h3>
 							<br>
-							<p><a href="../punto" class="btn btn-primary btn-lg">Acceder</a></p>
+							<p><a href="<?php echo base_url('menu') ?>" class="btn btn-primary btn-lg">Acceder</a></p>
 						</div>
 					</div>
 				</div>

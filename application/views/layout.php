@@ -18,6 +18,12 @@
 		.login-page > .content, .lock-page > .content {
 			padding-top: 12vh;
 		}
+		.card {
+			background-color: rgba(255,255,255, 0.8);
+		}
+		.full-page[data-image]:after, .full-page.has-image:after {
+			opacity: 0;
+		}
 	</style>
 	<?php echo $this->section('css') ?>
 </head>
@@ -47,7 +53,7 @@
 	</nav>
 
 	<div class="wrapper wrapper-full-page">
-		<div class="full-page login-page" data-color="" data-image="<?php echo base_url('assets/images/bg2.jpg') ?>">
+		<div class="full-page login-page" data-color="blue" data-image="<?php echo base_url('assets/images/bg10.jpg') ?>">
 			<div class="content">
 				<div class="container-fluid">
 					<?php echo $this->section('vista') ?>
