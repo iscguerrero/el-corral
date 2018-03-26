@@ -22,7 +22,7 @@
 			background-color: rgba(255,255,255, 0.8);
 		}
 		.full-page[data-image]:after, .full-page.has-image:after {
-			opacity: 0;
+			opacity: 0.7;
 		}
 	</style>
 	<?php echo $this->section('css') ?>
@@ -42,10 +42,12 @@
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="<?php echo base_url('menu') ?>">Menú</a>
-					<li><a href="<?php echo base_url('punto') ?>">Punto</a></li>
-					<li><a href="<?php echo base_url('escritorio') ?>">Escritorio</a>
-					<li><a href="<?php echo base_url('gastos') ?>">Gastos</a>
+				<li><a href="<?php echo base_url('wp/inicio') ?>">Página</a>
+					<li><a href="<?php echo base_url('categoriasc/inicio') ?>">Categorías</a>
+					<li><a href="<?php echo base_url('menu/inicio') ?>">Menú</a>
+					<li><a href="<?php echo base_url('punto/inicio') ?>">Punto</a></li>
+					<li><a href="<?php echo base_url('escritorio/inicio') ?>">Escritorio</a>
+					<li><a href="<?php echo base_url('gastos/inicio') ?>">Gastos</a>
 					</li>
 				</ul>
 			</div>
@@ -71,12 +73,15 @@
 </body>
 	<script src="<?php echo base_url('assets/js/jquery-3.1.1.min.js') ?>" type="text/javascript"></script>
 	<script src="<?php echo base_url('assets/js/perfect-scrollbar.min.js') ?>" type="text/javascript"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets/js/moment.min.js') ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets/js/locale-es.js') ?>"></script>
 	<script src="<?php echo base_url('assets/js/bootstrap.min.js') ?>" type="text/javascript"></script>
 	<script src="<?php echo base_url('assets/js/es6-promise-auto.min.js') ?>"></script>
 	<script src="<?php echo base_url('assets/js/bootstrap-notify.js') ?>"></script>
 	<script src="<?php echo base_url('assets/js/bootstrap-switch-tags.js') ?>"></script>
 	<script src="<?php echo base_url('assets/js/sweetalert2.js') ?>"></script>
-	<script src="<?php echo base_url('assets/js/bootstrap-table.js') ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap-selectpicker.js') ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap-datetimepicker.js') ?>"></script>
 	<script src="<?php echo base_url('assets/js/paper-dashboard.js') ?>"></script>
 	<script type="text/javascript">
 		$().ready(function(){

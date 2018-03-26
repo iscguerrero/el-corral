@@ -1,18 +1,23 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class punto extends Base_Controller {
+class categoriasc extends Base_Controller {
 	public function __construct(){
 		parent::__construct();
-		$this->load->model('platillos');
-		$this->load->model('pedido');
-		$this->load->model('partidas');
+		$this->load->model('categorias');
 	}
 	public function inicio() {
-		echo $this->templates->render('punto/inicio');
+		echo $this->templates->render('categoriasc/inicio');
 	}
-	# Funcion para guardar el pedido
-	public function guardarPedido() {
+	# Funcion para obtener el catalogo de categorias
+	public function obtenerCategorias() {
+		if(!$this->input->is_ajax_request()) show_404();
+		$campos = 'cve_categoria, categoria, resenia';
+		$wheres = array('estatus' => 'A');
+		exit(json_encode($this->categorias->filter($wheres, $campos)));
+	}
+	# Funcion para editar / dar de alta una categoria
+	public function crudCategorias() {
 		if(!$this->input->is_ajax_request()) show_404();
 		$data = array(
 			'categoria' => $this->input->post('categoria'),
