@@ -19,7 +19,7 @@
 			padding-top: 12vh;
 		}
 		.card {
-			background-color: rgba(255,255,255, 0.8);
+			background-color: rgba(255,255,255, 1);
 		}
 		.full-page[data-image]:after, .full-page.has-image:after {
 			opacity: 0.7;
@@ -42,13 +42,11 @@
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
-				<li><a href="<?php echo base_url('wp/inicio') ?>">Página</a>
-					<li><a href="<?php echo base_url('categoriasc/inicio') ?>">Categorías</a>
-					<li><a href="<?php echo base_url('menu/inicio') ?>">Menú</a>
+					<li><a href="<?php echo base_url('wp/inicio') ?>">Página</a></li>
+					<li><a href="<?php echo base_url('categoriasc/inicio') ?>">Categorías</a></li>
+					<li><a href="<?php echo base_url('menu/inicio') ?>">Menú</a></li>
 					<li><a href="<?php echo base_url('punto/inicio') ?>">Punto</a></li>
-					<li><a href="<?php echo base_url('escritorio/inicio') ?>">Escritorio</a>
-					<li><a href="<?php echo base_url('gastos/inicio') ?>">Gastos</a>
-					</li>
+					<li><a href="<?php echo base_url('escritorio/inicio') ?>">Escritorio</a></li>
 				</ul>
 			</div>
 		</div>

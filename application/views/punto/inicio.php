@@ -39,7 +39,29 @@
 			</div>
 		</div>
 		<div class="table-responsive">
-			<table id="partidas"></table>
+			<table id="partidas">
+				<tfoot>
+					<tr>
+						<td colspan="3"></td>
+						<td class="text-right" id="ttotal"></td>
+						<td></td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="input-group pull-right" style="max-width: 350px">
+					<span class="input-group-btn">
+						<button type="button" class="btn btn-default" id="cancelar">Cancelar</button>
+					</span>
+					<input type="text" class="form-control text-right" name="efectivo" id="efectivo" placeholder="Paga con...">
+					<span class="input-group-btn">
+						<button type="button" class="btn btn-default" id="finalizar" >Finalizar</button>
+					</span>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -65,6 +87,8 @@
 </div>
 <?php $this->stop() ?>
 <?php $this->start('js') ?>
+	<script src="<?php echo base_url('assets/js/bootstrap-table.js')?>"></script>
+	<script src="<?php echo base_url('assets/js/locale/bootstrap-table-es-MX.min.js')?>"></script>
 	<script src="<?php echo base_url('public/js/master.js') ?>"></script>
 	<script src="<?php echo base_url('public/js/punto/inicio.js') ?>"></script>
 <?php $this->stop() ?>
