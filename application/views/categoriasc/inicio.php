@@ -11,9 +11,10 @@
 		<div class="card-content">
 			<div class="row">
 				<div class="col-xs-12">
-					<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mcategorias">Nueva</button>
+					<button class="btn btn-primary" data-toggle="modal" data-target="#mcategorias">Nueva</button>
 				</div>
 			</div>
+			<br>
 			<div class="table-responsive">
 				<table class="table table-shopping" id="tcategorias">
 					<thead>

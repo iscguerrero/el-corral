@@ -56,7 +56,7 @@
 					<span class="input-group-btn">
 						<button type="button" class="btn btn-default" id="cancelar">Cancelar</button>
 					</span>
-					<input type="text" class="form-control text-right" name="efectivo" id="efectivo" placeholder="Paga con...">
+					<input type="number" class="form-control text-right" name="efectivo" id="efectivo" placeholder="Paga con..." in="0" step="0.1">
 					<span class="input-group-btn">
 						<button type="button" class="btn btn-default" id="finalizar" >Finalizar</button>
 					</span>

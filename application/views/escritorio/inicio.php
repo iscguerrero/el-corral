@@ -93,20 +93,25 @@
 </div>
 <div class="card">
 	<div class="card-content">
-		<div class="row">
-			<div class="col-xs-12">
-				<form action="#" id="fparametros" class="form-inline">
-					<input type="text" class="form-control datepicker" name="fi" id="fi" placeholder="Fecha Inicial" required>
-					<input type="text" class="form-control datepicker" name="ff" id="ff" placeholder="Fecha Final" required>
+		<form action="#" id="fparametros" class="form-inline">
+			<div class="row">
+				<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+					<input type="text" class="form-control text-center datepicker" name="fi" id="fi" placeholder="Fecha Inicial" required>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+					<input type="text" class="form-control text-center datepicker" name="ff" id="ff" placeholder="Fecha Final" required>
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
 					<button type="submit" class="btn btn-primary">Generar</button>
-				</form>
-			</div>
+				</div>
+			</form>
 		</div>
 		<div class="nav-tabs-navigation">
 			<div class="nav-tabs-wrapper">
 				<ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
 					<li class="active"><a href="#rventas" data-toggle="tab">Ventas</a></li>
 					<li><a href="#rgastos" data-toggle="tab">Gastos</a></li>
+					<li><a href="#estado" data-toggle="tab">Estado de Resultados</a></li>
 				</ul>
 			</div>
 		</div>
@@ -116,6 +121,30 @@
 			</div>
 			<div class="tab-pane" id="rgastos">
 				<table id="tgastos"></table>
+			</div>
+			<div class="tab-pane" id="estado">
+				<table class="table">
+					<thead>
+						<tr>
+							<th class="text-left">Concepto</th>
+							<th class="text-right" style="width: 150px">Importe</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="success">
+							<td class="text-left">Ventas totales del perido</td>
+							<td class="text-right" id="erventas" style="width: 150px">$ 0.00</td>
+						</tr>
+						<tr class="warning">
+							<td class="text-left">Gastos totales del perido</td>
+							<td class="text-right" id="ergastos" style="width: 150px">$ 0.00</td>
+						</tr>
+						<tr class="info">
+							<td class="text-left">Utilidad/Perdida del perido</td>
+							<td class="text-right" id="erutilidad" style="width: 150px">$ 0.00</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>
@@ -133,7 +162,7 @@
 						<div class="col-xs-12">
 							<div class="form-group">
 								<label for="importe">Importe</label>
-								<input type="text" class="form-control" name="importe" id="importe" required>
+								<input type="number" class="form-control text-right" name="importe" id="importe" in="0" step="0.1" required>
 							</div>
 							<div class="form-group">
 								<label for="gasto">Gasto</label>
